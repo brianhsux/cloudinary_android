@@ -25,6 +25,7 @@ android {
         variant.outputs.each { output ->
             output.processManifest.doLast {
                 filterManifest("${buildDir}/intermediates/manifests/full/${variant.dirName}/AndroidManifest.xml", project.property("cloudinary.url"))
+                filterManifest("${buildDir}/intermediates/manifests/instant-run/${variant.dirName}/AndroidManifest.xml", project.property("cloudinary.url"))
             }
         }
     }
